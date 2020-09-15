@@ -1,6 +1,6 @@
 {
-    "name": "fof/filter",
-    "description": "Filter out words and phrases from forum posts",
+    "name": "freeflarum/fof-filter",
+    "description": "Filter out words and phrases from forum posts. FreeFlarum fork to fix mail driver issue by removing it.",
     "type": "flarum-extension",
     "keywords": ["moderation"],
     "license": "MIT",
