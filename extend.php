@@ -17,9 +17,9 @@ use Illuminate\Contracts\View\Factory;
 return [
     (new Extend\Frontend('admin'))
         ->css(__DIR__.'/resources/less/admin/WordConfigPage.less')
-        ->js(__DIR__.'/js/dist/admin.js'),
+        ->js(__DIR__.'/js/admin.js'),
     (new Extend\Frontend('forum'))
-        ->js(__DIR__.'/js/dist/forum.js'),
+        ->js(__DIR__.'/js/forum.js'),
     new Extend\Locales(__DIR__.'/resources/locale'),
     new Extend\Compat(function (Dispatcher $events, Factory $views) {
         $events->subscribe(Listener\FilterPosts::class);
