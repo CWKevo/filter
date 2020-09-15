@@ -23,7 +23,6 @@ export default class WordConfigPage extends Component {
 
         this.fields = [
             'words',
-            'flaggedEmail',
             'flaggedSubject',
             'count',
             'cooldown'
@@ -31,7 +30,6 @@ export default class WordConfigPage extends Component {
 
         this.switches = [
             'autoMergePosts',
-            'emailWhenFlagged',
         ]
 
         this.values = {};
@@ -63,21 +61,6 @@ export default class WordConfigPage extends Component {
                                 </div>
                             ]
                         })}
-                        {FieldSet.component({
-                            label: app.translator.trans('fof-filter.admin.input.email_label'),
-                            className: 'WordConfigPage-Settings',
-                            children: [
-                                <div className="WordConfigPage-Settings-input">
-                                    <label>{app.translator.trans('fof-filter.admin.input.email_subject')}</label>
-                                    <input className="FormControl" value={this.values.flaggedSubject() || app.translator.trans('fof-filter.admin.email.default_subject')} oninput={m.withAttr('value', this.values.flaggedSubject)}/>
-                                    <label>{app.translator.trans('fof-filter.admin.input.email_body')}</label>
-                                    <div className="helpText">
-                                        {app.translator.trans('fof-filter.admin.email_help')}
-                                    </div>
-                                    <textarea className="FormControl" rows="4" value={this.values.flaggedEmail() || app.translator.trans('fof-filter.admin.email.default_text')} oninput={m.withAttr('value', this.values.flaggedEmail)}/>
-                                </div>
-                            ]
-                        })}
                         {Switch.component({
                             state: this.values.autoMergePosts(),
                             children: app.translator.trans('fof-filter.admin.input.switch.merge'),
@@ -89,19 +72,6 @@ export default class WordConfigPage extends Component {
                         <div className="helpText">
                             {app.translator.trans('fof-filter.admin.help2')}
                         </div>
-                        {Switch.component({
-                            state: this.values.emailWhenFlagged(),
-                            children: app.translator.trans('fof-filter.admin.input.switch.email'),
-                            className: 'WordConfigPage-Settings-switch',
-                            onchange: this.values.emailWhenFlagged
-                        })}
-
-                        {Button.component({
-                            type: 'submit',
-                            className: 'Button Button--primary',
-                            children: app.translator.trans('core.admin.email.submit_button'),
-                            loading: this.loading
-                        })}
                     </form>
                 </div>
             </div>
