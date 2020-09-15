@@ -2,7 +2,7 @@
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/fof/filter.svg)](https://packagist.org/packages/fof/filter)
 
-A [Flarum](http://flarum.org) extension that filters and flags posts by keywords, with the ability to auto-merge double posts, modified to fix mail driver issue with FreeFlarum.
+A [Flarum](http://flarum.org) extension that filters and flags posts by keywords, with the ability to auto-merge double posts, modified to temp-fix mail driver issue with FreeFlarum.
 
 ### Goals
 
@@ -14,15 +14,16 @@ A [Flarum](http://flarum.org) extension that filters and flags posts by keywords
 
 ### Installation
 
-Use [Bazaar](https://discuss.flarum.org/d/5151-flagrow-bazaar-the-extension-marketplace) or install manually with composer:
+Install with composer:
 
 ```bash
-composer require fof/filter
+composer require freeflarum/fof-filter
 ```
 
 ### Links
 
 - [on github](https://github.com/friendsofflarum/filter)
-- [on packagist](https://packagist.org/packages/fof/filter)
+- [on packagist (original)](https://packagist.org/packages/fof/filter)
+- [on packagist (ff)](https://packagist.org/packages/freeflarum/fof-filter)
 
-An extension by [FriendsOfFlarum](https://github.com/FriendsOfFlarum).
+An extension by [FriendsOfFlarum](https://github.com/FriendsOfFlarum). Modified by [FreeFlarum](https://freeflarum.com) to remove mail drivers which caused translation bugs. Temp fix.
